@@ -1,0 +1,414 @@
+/* SPDX-License-Identifier: (GPL-2.0+ or MIT) */
+/*
+ * Copyright (c) 2018 Amlogic, Inc. All rights reserved.
+ * Author: Xingyu Chen <xingyu.chen@amlogic.com>
+ */
+
+#ifndef _DT_BINDINGS_MESON_G12A_GPIO_H
+#define _DT_BINDINGS_MESON_G12A_GPIO_H
+
+/* First GPIO chip */
+#define GPIOAO_0	0
+#define GPIOAO_1	1
+#define GPIOAO_2	2
+#define GPIOAO_3	3
+#define GPIOAO_4	4
+#define GPIOAO_5	5
+#define GPIOAO_6	6
+#define GPIOAO_7	7
+#define GPIOAO_8	8
+#define GPIOAO_9	9
+#define GPIOAO_10	10
+#define GPIOAO_11	11
+#define GPIOE_0		12
+#define GPIOE_1		13
+#define GPIOE_2		14
+
+/* Second GPIO chip */
+#define GPIOZ_0		0
+#define GPIOZ_1		1
+#define GPIOZ_2		2
+#define GPIOZ_3		3
+#define GPIOZ_4		4
+#define GPIOZ_5		5
+#define GPIOZ_6		6
+#define GPIOZ_7		7
+#define GPIOZ_8		8
+#define GPIOZ_9		9
+#define GPIOZ_10	10
+#define GPIOZ_11	11
+#define GPIOZ_12	12
+#define GPIOZ_13	13
+#define GPIOZ_14	14
+#define GPIOZ_15	15
+#define GPIOH_0		16
+#define GPIOH_1		17
+#define GPIOH_2		18
+#define GPIOH_3		19
+#define GPIOH_4		20
+#define GPIOH_5		21
+#define GPIOH_6		22
+#define GPIOH_7		23
+#define GPIOH_8		24
+#define BOOT_0		25
+#define BOOT_1		26
+#define BOOT_2		27
+#define BOOT_3		28
+#define BOOT_4		29
+#define BOOT_5		30
+#define BOOT_6		31
+#define BOOT_7		32
+#define BOOT_8		33
+#define BOOT_9		34
+#define BOOT_10		35
+#define BOOT_11		36
+#define BOOT_12		37
+#define BOOT_13		38
+#define BOOT_14		39
+#define BOOT_15		40
+#define GPIOC_0		41
+#define GPIOC_1		42
+#define GPIOC_2		43
+#define GPIOC_3		44
+#define GPIOC_4		45
+#define GPIOC_5		46
+#define GPIOC_6		47
+#define GPIOC_7		48
+#define GPIOA_0		49
+#define GPIOA_1		50
+#define GPIOA_2		51
+#define GPIOA_3		52
+#define GPIOA_4		53
+#define GPIOA_5		54
+#define GPIOA_6		55
+#define GPIOA_7		56
+#define GPIOA_8		57
+#define GPIOA_9		58
+#define GPIOA_10	59
+#define GPIOA_11	60
+#define GPIOA_12	61
+#define GPIOA_13	62
+#define GPIOA_14	63
+#define GPIOA_15	64
+#define GPIOX_0		65
+#define GPIOX_1		66
+#define GPIOX_2		67
+#define GPIOX_3		68
+#define GPIOX_4		69
+#define GPIOX_5		70
+#define GPIOX_6		71
+#define GPIOX_7		72
+#define GPIOX_8		73
+#define GPIOX_9		74
+#define GPIOX_10	75
+#define GPIOX_11	76
+#define GPIOX_12	77
+#define GPIOX_13	78
+#define GPIOX_14	79
+#define GPIOX_15	80
+#define GPIOX_16	81
+#define GPIOX_17	82
+#define GPIOX_18	83
+#define GPIOX_19	84
+
+#endif /* _DT_BINDINGS_MESON_G12A_GPIO_H */
+
+
+linux/include/dt-bindings/gpio/tegra194-gpio.h
+@cyndis
+cyndis arm64: tegra: Add Tegra194 chip device tree
+Latest commit 5425fb1 on 20 Feb 2018
+History
+1 contributor
+61 lines (53 sloc) 1.93 KB
+/* SPDX-License-Identifier: GPL-2.0 */
+/* Copyright (c) 2018, NVIDIA CORPORATION. All rights reserved. */
+
+/*
+ * This header provides constants for binding nvidia,tegra194-gpio*.
+ *
+ * The first cell in Tegra's GPIO specifier is the GPIO ID. The macros below
+ * provide names for this.
+ *
+ * The second cell contains standard flag values specified in gpio.h.
+ */
+
+#ifndef _DT_BINDINGS_GPIO_TEGRA194_GPIO_H
+#define _DT_BINDINGS_GPIO_TEGRA194_GPIO_H
+
+#include <dt-bindings/gpio/gpio.h>
+
+/* GPIOs implemented by main GPIO controller */
+#define TEGRA194_MAIN_GPIO_PORT_A 0
+#define TEGRA194_MAIN_GPIO_PORT_B 1
+#define TEGRA194_MAIN_GPIO_PORT_C 2
+#define TEGRA194_MAIN_GPIO_PORT_D 3
+#define TEGRA194_MAIN_GPIO_PORT_E 4
+#define TEGRA194_MAIN_GPIO_PORT_F 5
+#define TEGRA194_MAIN_GPIO_PORT_G 6
+#define TEGRA194_MAIN_GPIO_PORT_H 7
+#define TEGRA194_MAIN_GPIO_PORT_I 8
+#define TEGRA194_MAIN_GPIO_PORT_J 9
+#define TEGRA194_MAIN_GPIO_PORT_K 10
+#define TEGRA194_MAIN_GPIO_PORT_L 11
+#define TEGRA194_MAIN_GPIO_PORT_M 12
+#define TEGRA194_MAIN_GPIO_PORT_N 13
+#define TEGRA194_MAIN_GPIO_PORT_O 14
+#define TEGRA194_MAIN_GPIO_PORT_P 15
+#define TEGRA194_MAIN_GPIO_PORT_Q 16
+#define TEGRA194_MAIN_GPIO_PORT_R 17
+#define TEGRA194_MAIN_GPIO_PORT_S 18
+#define TEGRA194_MAIN_GPIO_PORT_T 19
+#define TEGRA194_MAIN_GPIO_PORT_U 20
+#define TEGRA194_MAIN_GPIO_PORT_V 21
+#define TEGRA194_MAIN_GPIO_PORT_W 22
+#define TEGRA194_MAIN_GPIO_PORT_X 23
+#define TEGRA194_MAIN_GPIO_PORT_Y 24
+#define TEGRA194_MAIN_GPIO_PORT_Z 25
+#define TEGRA194_MAIN_GPIO_PORT_FF 26
+#define TEGRA194_MAIN_GPIO_PORT_GG 27
+
+#define TEGRA194_MAIN_GPIO(port, offset) \
+	((TEGRA194_MAIN_GPIO_PORT_##port * 8) + offset)
+
+/* GPIOs implemented by AON GPIO controller */
+#define TEGRA194_AON_GPIO_PORT_AA 0
+#define TEGRA194_AON_GPIO_PORT_BB 1
+#define TEGRA194_AON_GPIO_PORT_CC 2
+#define TEGRA194_AON_GPIO_PORT_DD 3
+#define TEGRA194_AON_GPIO_PORT_EE 4
+
+#define TEGRA194_AON_GPIO(port, offset) \
+	((TEGRA194_AON_GPIO_PORT_##port * 8) + offset)
+
+#endif
+
+/* SPDX-License-Identifier: GPL-2.0 */
+/*
+ * Renesas RPC-IF core driver
+ *
+ * Copyright (C) 2018~2019 Renesas Solutions Corp.
+ * Copyright (C) 2019 Macronix International Co., Ltd.
+ * Copyright (C) 2019-2020 Cogent Embedded, Inc.
+ */
+
+#ifndef __RENESAS_RPC_IF_H
+#define __RENESAS_RPC_IF_H
+
+#include <linux/pm_runtime.h>
+#include <linux/types.h>
+
+enum rpcif_data_dir {
+	RPCIF_NO_DATA,
+	RPCIF_DATA_IN,
+	RPCIF_DATA_OUT,
+};
+
+struct	rpcif_op {
+	struct {
+		u8 buswidth;
+		u8 opcode;
+		bool ddr;
+	} cmd, ocmd;
+
+	struct {
+		u8 nbytes;
+		u8 buswidth;
+		bool ddr;
+		u64 val;
+	} addr;
+
+	struct {
+		u8 ncycles;
+		u8 buswidth;
+	} dummy;
+
+	struct {
+		u8 nbytes;
+		u8 buswidth;
+		bool ddr;
+		u32 val;
+	} option;
+
+	struct {
+		u8 buswidth;
+		unsigned int nbytes;
+		enum rpcif_data_dir dir;
+		bool ddr;
+		union {
+			void *in;
+			const void *out;
+		} buf;
+	} data;
+};
+
+struct	rpcif {
+	struct device *dev;
+	void __iomem *dirmap;
+	struct regmap *regmap;
+	struct reset_control *rstc;
+	size_t size;
+	enum rpcif_data_dir dir;
+	u8 bus_size;
+	void *buffer;
+	u32 xferlen;
+	u32 smcr;
+	u32 smadr;
+	u32 command;		/* DRCMR or SMCMR */
+	u32 option;		/* DROPR or SMOPR */
+	u32 enable;		/* DRENR or SMENR */
+	u32 dummy;		/* DRDMCR or SMDMCR */
+	u32 ddr;		/* DRDRENR or SMDRENR */
+};
+
+int  rpcif_sw_init(struct rpcif *rpc, struct device *dev);
+void rpcif_hw_init(struct rpcif *rpc, bool hyperflash);
+void rpcif_prepare(struct rpcif *rpc, const struct rpcif_op *op, u64 *offs,
+		   size_t *len);
+int rpcif_manual_xfer(struct rpcif *rpc);
+ssize_t rpcif_dirmap_read(struct rpcif *rpc, u64 offs, size_t len, void *buf);
+
+static inline void rpcif_enable_rpm(struct rpcif *rpc)
+{
+	pm_runtime_enable(rpc->dev);
+}
+
+static inline void rpcif_disable_rpm(struct rpcif *rpc)
+{
+	pm_runtime_disable(rpc->dev);
+}
+
+#endif // __RENESAS_RPC_IF_H
+
+
+
+
+/* SPDX-License-Identifier: GPL-2.0 */
+#ifndef _TRACE_SYSCALL_H
+#define _TRACE_SYSCALL_H
+
+#include <linux/tracepoint.h>
+#include <linux/unistd.h>
+#include <linux/trace_events.h>
+#include <linux/thread_info.h>
+
+#include <asm/ptrace.h>
+
+
+/*
+ * A syscall entry in the ftrace syscalls array.
+ *
+ * @name: name of the syscall
+ * @syscall_nr: number of the syscall
+ * @nb_args: number of parameters it takes
+ * @types: list of types as strings
+ * @args: list of args as strings (args[i] matches types[i])
+ * @enter_fields: list of fields for syscall_enter trace event
+ * @enter_event: associated syscall_enter trace event
+ * @exit_event: associated syscall_exit trace event
+ */
+struct syscall_metadata {
+	const char	*name;
+	int		syscall_nr;
+	int		nb_args;
+	const char	**types;
+	const char	**args;
+	struct list_head enter_fields;
+
+	struct trace_event_call *enter_event;
+	struct trace_event_call *exit_event;
+};
+
+#if defined(CONFIG_TRACEPOINTS) && defined(CONFIG_HAVE_SYSCALL_TRACEPOINTS)
+static inline void syscall_tracepoint_update(struct task_struct *p)
+{
+	if (test_syscall_work(SYSCALL_TRACEPOINT))
+		set_task_syscall_work(p, SYSCALL_TRACEPOINT);
+	else
+		clear_task_syscall_work(p, SYSCALL_TRACEPOINT);
+}
+#else
+static inline void syscall_tracepoint_update(struct task_struct *p)
+{
+}
+#endif
+
+#endif /* _TRACE_SYSCALL_H */
+/* SPDX-License-Identifier: GPL-2.0-only */
+/*
+ * Copyright (C) 2013 Samsung Electronics Co., Ltd.
+ */
+#ifndef __CLOCKSOURCE_SAMSUNG_PWM_H
+#define __CLOCKSOURCE_SAMSUNG_PWM_H
+
+#include <linux/spinlock.h>
+
+#define SAMSUNG_PWM_NUM		5
+
+/*
+ * Following declaration must be in an ifdef due to this symbol being static
+ * in pwm-samsung driver if the clocksource driver is not compiled in and the
+ * spinlock is not shared between both drivers.
+ */
+#ifdef CONFIG_CLKSRC_SAMSUNG_PWM
+extern spinlock_t samsung_pwm_lock;
+#endif
+
+struct samsung_pwm_variant {
+	u8 bits;
+	u8 div_base;
+	u8 tclk_mask;
+	u8 output_mask;
+	bool has_tint_cstat;
+};
+
+void samsung_pwm_clocksource_init(void __iomem *base,
+		unsigned int *irqs, struct samsung_pwm_variant *variant);
+
+#endif /* __CLOCKSOURCE_SAMSUNG_PWM_H */
+
+
+/* SPDX-License-Identifier: GPL-2.0-only */
+/*
+ * TI DaVinci clocksource driver
+ *
+ * Copyright (C) 2019 Texas Instruments
+ * Author: Bartosz Golaszewski <bgolaszewski@baylibre.com>
+ */
+
+#ifndef __TIMER_DAVINCI_H__
+#define __TIMER_DAVINCI_H__
+
+#include <linux/clk.h>
+#include <linux/ioport.h>
+
+enum {
+	DAVINCI_TIMER_CLOCKEVENT_IRQ,
+	DAVINCI_TIMER_CLOCKSOURCE_IRQ,
+	DAVINCI_TIMER_NUM_IRQS,
+};
+
+/**
+ * struct davinci_timer_cfg - davinci clocksource driver configuration struct
+ * @reg:        register range resource
+ * @irq:        clockevent and clocksource interrupt resources
+ * @cmp_off:    if set - it specifies the compare register used for clockevent
+ *
+ * Note: if the compare register is specified, the driver will use the bottom
+ * clock half for both clocksource and clockevent and the compare register
+ * to generate event irqs. The user must supply the correct compare register
+ * interrupt number.
+ *
+ * This is only used by da830 the DSP of which uses the top half. The timer
+ * driver still configures the top half to run in free-run mode.
+ */
+struct davinci_timer_cfg {
+	struct resource reg;
+	struct resource irq[DAVINCI_TIMER_NUM_IRQS];
+	unsigned int cmp_off;
+};
+
+int __init davinci_timer_register(struct clk *clk,
+				  const struct davinci_timer_cfg *data);
+
+#endif /* __TIMER_DAVINCI_H__ */
